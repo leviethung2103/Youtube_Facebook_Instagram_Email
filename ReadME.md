@@ -12,7 +12,7 @@ sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtub
 sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
 
-### Run
+### Download Youtube Videos
 
 Run the python script to download the videos at current directory
 
@@ -26,10 +26,11 @@ python downloads_YTvideos.py --folder-dst ./
 -- url : Download link
 ```
 
-
+### Post Processing After Downloading
+* Decode the Unicode: convert Tiếng Việt to Tieng Viet
+* Rename the filenames 
 
 `filter_videos.py`
 
 * work with file name as Unicode type
 * rename the old names with new file names
-
