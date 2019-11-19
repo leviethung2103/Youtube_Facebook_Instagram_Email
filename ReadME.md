@@ -11,7 +11,10 @@ If you do not have curl, you can alternatively use a recent wget:
 sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
-
+Install the UniDecode package
+```
+pip install unidecode
+```
 ### Download Youtube Videos
 
 Run the python script to download the videos at current directory
