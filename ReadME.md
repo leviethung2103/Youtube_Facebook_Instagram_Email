@@ -1,4 +1,77 @@
-### Installation
+### 1. Introduction
+
+I've created an automation project that simply focuses on 4 platforms. 
+
+* Youtube
+* Facebook
+* Gmail
+* Instagram
+
+I've got the ideas while I wanted to backup my Instagram account. Therefore, I need to download all the images and videos from my personal account. 
+
+After searching on Internet, I've found the Instagram API that can help me to scape the data from any users (public users and your friends). 
+
+**Table of contents**
+
+1. Introduction
+2. Instagram
+3. Youtube
+4. Faebook
+
+### Environments
+
+I highly recommend to use virtual environment and following packages
+
+* Python 3.6
+
+### 2. INSTAGRAM
+
+I utilized the [Instaloader](https://github.com/instaloader/instaloader) to download images and videos from Instagram. 
+
+**Instaloader**
+
+- downloads **public and private profiles, hashtags, user stories, feeds and saved media**,
+- downloads **comments, geotags and captions** of each post,
+- automatically **detects profile name changes** and renames the target directory accordingly,
+- allows **fine-grained customization** of filters and where to store downloaded media.
+- downloads many profiles at the same time
+
+#### 2.1. How to install
+
+```bash
+pip3 install instaloader
+```
+
+#### 2.2. Usage
+
+To **download all pictures and videos of a profile**, as well as the **profile picture**, do
+
+```bash
+ instaloader profile [profile ...]
+```
+
+where `profile` is the name of a profile you want to download. Instead of only one profile, you may also specify a list of profiles.
+
+Instaloader can also be used to **download private profiles**. To do so, invoke it with
+
+```bash
+instaloader --login=your_username profile [profile ...]
+```
+
+When logging in, Instaloader **stores the session cookies** in a file in your temporary directory, which will be reused later the next time `--login` is given. So you can download private profiles **non-interactively** when you already have a valid session cookie file.
+
+```bash
+instaloader [--comments] [--geotags] [--stories] [--highlights] [--tagged]
+            [--login YOUR-USERNAME] [--fast-update]
+            profile | "#hashtag" | :stories | :feed | :saved
+```
+
+
+
+### 3. YOUTUBE
+
+#### 3.1 Installation
+
 To install it right away for all UNIX users (Linux, macOS, etc.), type:
 ```bash
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
@@ -12,24 +85,25 @@ sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtub
 sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
 Install the UniDecode package
-```
+```bash
 pip install unidecode
 ```
-### Download Youtube Videos
+#### 3.2 Usage
 
-Run the python script to download the videos at current directory
+##### Download the Youtube videos by run the python script to download the videos at current directory
 
 ```
-python downloads_YTvideos.py --folder-dst ./ 
+python youtube/downloads_YTvideos.py --folder-dst ./ 
 ```
 
-### Arguments
 ```
+arguments:
 -- dst_path: Where to save videos
 -- url : Download link
 ```
 
-### Post Processing After Downloading
+##### Post Processing After Downloading
+
 * Decode the Unicode: convert Tiếng Việt to Tieng Viet
 * Rename the filenames 
 
@@ -37,3 +111,24 @@ python downloads_YTvideos.py --folder-dst ./
 
 * work with file name as Unicode type
 * rename the old names with new file names
+
+#### 4. FACEBOOK (Under Development)
+
+```
+python facebook/get_FB_imgs.py
+```
+
+#### 5. GMAIL
+
+The main file is `quickstart.py`. We will filter emails with keywords
+
+Input the keyword in function `delete_messages`
+
+For example, I want to delete emails that contain Google Calendar. 
+
+```
+delete_messages('Google calendar')
+```
+
+
+
