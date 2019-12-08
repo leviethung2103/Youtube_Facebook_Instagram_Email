@@ -130,5 +130,43 @@ For example, I want to delete emails that contain Google Calendar.
 delete_messages('Google calendar')
 ```
 
+#### 6. COURSERA
 
+
+
+To download the courses of Coursera, you need to create an account and register the courses that you want to download. 
+
+If you don't already have one, create a Coursera account and enroll in a class. See https://www.coursera.org/courses for the list of classes.
+
+**Running the script:** 
+
+Run the script to download the materials by providing your Coursera account and password as well as the class names. You can specify some additional parameters:
+
+```
+python coursera-dl.py -u <email> <course-name>
+```
+
+```
+If you don't want to type your password in command line as plain text, you can use the script without -p option. In this case you will be prompted for password once the script is run.
+
+
+Parameters
+--subtitle-language en
+```
+
+```
+Without -p field:            coursera-dl -u <user> modelthinking-004
+Multiple classes:            coursera-dl -u <user> -p <pass> saas historyofrock1-001 algo-2012-002
+Filter by section name:      coursera-dl -u <user> -p <pass> -sf "Chapter_Four" crypto-004
+Filter by lecture name:      coursera-dl -u <user> -p <pass> -lf "3.1_" ml-2012-002
+Download only ppt files:     coursera-dl -u <user> -p <pass> -f "ppt" qcomp-2012-001
+Use a ~/.netrc file:         coursera-dl -n -- matrix-001
+Get the preview classes:     coursera-dl -n -b ni-001
+Specify download path:       coursera-dl -n --path=C:\Coursera\Classes\ comnetworks-002
+Display help:                coursera-dl --help
+
+Maintain a list of classes in a dir:
+  Initialize:              mkdir -p CURRENT/{class1,class2,..classN}
+  Update:                  coursera-dl -n --path CURRENT `\ls CURRENT`
+```
 
