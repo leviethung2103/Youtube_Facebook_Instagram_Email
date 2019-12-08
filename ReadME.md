@@ -143,7 +143,7 @@ If you don't already have one, create a Coursera account and enroll in a class. 
 Run the script to download the materials by providing your Coursera account and password as well as the class names. You can specify some additional parameters:
 
 ```
-python coursera-dl.py -u <email> <course-name>
+python coursera-dl.py -u <email> <course-name> --subtitle-language en --path <download-folder> --download-delay 0 
 ```
 
 ```
@@ -152,6 +152,8 @@ If you don't want to type your password in command line as plain text, you can u
 
 Parameters
 --subtitle-language en
+--download-delay 0 
+--path 
 ```
 
 ```
