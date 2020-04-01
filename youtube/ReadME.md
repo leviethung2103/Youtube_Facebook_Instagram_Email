@@ -20,12 +20,12 @@ pip install unidecode
 Run the python script to download the videos at current directory
 
 ```
-python downloads_YTvideos.py --folder-dst ./ 
+python downloads_YTvideos.py --folder-dst ./ --url 
 ```
 
 ### Arguments
 ```
--- dst_path: Where to save videos
+-- folder-dst: Where to save videos
 -- url : Download link
 ```
 
