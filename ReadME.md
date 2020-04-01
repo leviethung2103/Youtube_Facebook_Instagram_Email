@@ -7,28 +7,30 @@ I've created an automation project that simply focuses on 4 platforms.
 * Gmail
 * Instagram
 
-I've got the ideas while I wanted to backup my Instagram account. Therefore, I need to download all the images and videos from my personal account. 
+I've got the idea while I wanted to backup my Instagram account. Therefore, I need to download all the images and videos from my personal account. 
 
-After searching on Internet, I've found the Instagram API that can help me to scape the data from any users (public users and your friends). 
+After searching on Internet for a while, I've found that the Instagram API really can help me to crawl the data from any users (public users and your friends), execpt private users.
+
+Every section is describe clearly as following
 
 **Table of contents**
 
 1. Introduction
 2. Instagram
 3. Youtube
-4. Faebook
+4. Facebook
+5. Gmail
+6. Coursera
 
 ### Environments
 
-I highly recommend to use virtual environment and following packages
-
-* Python 3.6
+I highly recommend to use virtual environment with Python 3.6.
 
 ### 2. INSTAGRAM
 
-I utilized the [Instaloader](https://github.com/instaloader/instaloader) to download images and videos from Instagram. 
+I've utilized the [Instaloader](https://github.com/instaloader/instaloader) to download images and videos from Instagram. 
 
-**Instaloader**
+**Instaloader's benefits:**
 
 - downloads **public and private profiles, hashtags, user stories, feeds and saved media**,
 - downloads **comments, geotags and captions** of each post,
@@ -36,7 +38,7 @@ I utilized the [Instaloader](https://github.com/instaloader/instaloader) to down
 - allows **fine-grained customization** of filters and where to store downloaded media.
 - downloads many profiles at the same time
 
-#### 2.1. How to install
+#### 2.1. Installation
 
 ```bash
 pip3 install instaloader
@@ -65,8 +67,6 @@ instaloader [--comments] [--geotags] [--stories] [--highlights] [--tagged]
             [--login YOUR-USERNAME] [--fast-update]
             profile | "#hashtag" | :stories | :feed | :saved
 ```
-
-
 
 ### 3. YOUTUBE
 
@@ -132,8 +132,6 @@ delete_messages('Google calendar')
 
 #### 6. COURSERA
 
-
-
 To download the courses of Coursera, you need to create an account and register the courses that you want to download. 
 
 If you don't already have one, create a Coursera account and enroll in a class. See https://www.coursera.org/courses for the list of classes.
@@ -148,7 +146,6 @@ python coursera-dl.py -u <email> <course-name> --subtitle-language en --path <do
 
 ```
 If you don't want to type your password in command line as plain text, you can use the script without -p option. In this case you will be prompted for password once the script is run.
-
 
 Parameters
 --subtitle-language en
