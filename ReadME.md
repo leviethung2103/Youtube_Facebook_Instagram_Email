@@ -6,6 +6,7 @@ I've created an automation project that simply focuses on 4 platforms.
 * Facebook
 * Gmail
 * Instagram
+* Google Drive API 
 
 I've got the idea while I wanted to backup my Instagram account. Therefore, I need to download all the images and videos from my personal account. 
 
@@ -15,11 +16,12 @@ Every section is describe clearly as following
 
 **Table of contents**
 
-2. Instagram
-3. Youtube
-4. Facebook
+1. Instagram
+2. Youtube
+3. Facebook
 4. Gmail
 5. Coursera
+6. Google Drive Download API
 
 ### Environments
 
@@ -185,6 +187,24 @@ $ python coursera-dl -u <email> <course-name> --subtitle-language en --path <dow
 
 For advanced user, there're another interesting arguments you can discover later on. Please take a look the original repo at reference. 
 
+####  6. Google Drive
+**Step 1:** Install the required packages - Google Client Library
+
+```
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+```
+
+**Step 2: Turn on the Drive API** 
+
+After turn on the drive API, you will get the `credentials.json` file.
+
+**Step 3:** 
+
+
+
 ## References:
 
 [Coursera Downloader](https://github.com/coursera-dl/coursera-dl)
+
+https://developers.google.com/drive/api/v3/quickstart/python
+
