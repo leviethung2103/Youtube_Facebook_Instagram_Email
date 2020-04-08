@@ -1,6 +1,6 @@
 ### Introduction
 
-I've created an automation project that simply focuses on 4 platforms. 
+I've created an automation project that simply focuses on 6 platforms. 
 
 * Youtube
 * Facebook
@@ -22,6 +22,9 @@ Every section is describe clearly as following
 4. Gmail
 5. Coursera
 6. Google Drive Download API
+
+**[Updated]**
+After backing up all data in my Instagram account. I no longer use the Instagram anymore. The instagram part would not be the lastest update version. 
 
 ### Environments
 
