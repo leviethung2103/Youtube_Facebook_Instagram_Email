@@ -191,19 +191,31 @@ $ python coursera-dl -u <email> <course-name> --subtitle-language en --path <dow
 For advanced user, there're another interesting arguments you can discover later on. Please take a look the original repo at reference. 
 
 ####  6. Google Drive
-**Step 1:** Install the required packages - Google Client Library
+Download the public with [Google Download API](https://pypi.org/project/gdown/). 
 
+You can download large file from Google Drive via `command-line` or `python`. 
+
+**Installation**
+
+```bash
+pip install gdown
 ```
-pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+
+**From Command Line**
+
+```bash
+gdown --id 0B_NiLAzvehC9R2stRmQyM3ZiVjQ
 ```
 
-**Step 2: Turn on the Drive API** 
+**From Python**
 
-After turn on the drive API, you will get the `credentials.json` file.
+```python
+import gdown
 
-**Step 3:** 
-
-
+url = 'https://drive.google.com/uc?id=0B9P1L--7Wd2vNm9zMTJWOGxobkU'
+output = '20150428_collected_images.tgz'
+gdown.download(url, output, quiet=False)
+```
 
 ## References:
 

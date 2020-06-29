@@ -1,5 +1,5 @@
-from google_drive_downloader import GoogleDriveDownloader as gdd
 import argparse
+import gdown
 
 def get_args():
     parser = argparse.ArgumentParser(description="This script download the Youtube Videos",
@@ -14,8 +14,8 @@ def get_args():
 
 def main():
     args = get_args()
-    gdd.download_file_from_google_drive(file_id=args.id,
-                                        dest_path=args.dst_path,
-                                        unzip=args.unzip)
+
+    gdown.download(args.id,args.dst_path,quiet=False)
+
 if __name__ == '__main__':
     main()
